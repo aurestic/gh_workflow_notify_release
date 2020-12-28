@@ -9,7 +9,7 @@ LABEL "repository"="https://github.com/aurestic/gh_workflow_notify_release"
 LABEL "homepage"="https://github.com/aurestic/gh_workflow_notify_release"
 LABEL "maintainer"="Jose Zambudio <zamberjo@gmail.com>"
 
-RUN apk add coreutils
+RUN apk add coreutils curl
 
 COPY entrypoint.sh /entrypoint.sh
 
