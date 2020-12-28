@@ -1,14 +1,15 @@
 #!/bin/sh
 set -eu
 
+GITHUB_REPOSITORY=
 echo "GITHUB_REPOSITORY: $GITHUB_REPOSITORY";
 
-curl --header "Content-Type: application/json" \
-    --request POST \
-    --data '{"params": {"repository":"'$GITHUB_REPOSITORY'"}}' \
-    https://diagram.aurestic.com/github/release;
+ENDPOINTS="https://diagram.aurestic.com/github/release"
+ENDPOINTS="${ENDPOINTS} https://aures.aurestic.com/github/release"
 
-curl --header "Content-Type: application/json" \
-    --request POST \
-    --data '{"params": {"repository":"'$GITHUB_REPOSITORY'"}}' \
-    https://aures.aurestic.com/github/release;
+for endpoint in ${ENDPOINTS};do
+    curl --header "Content-Type: application/json" \
+        --request POST \
+        --data '{"params": {"repository":"'$GITHUB_REPOSITORY'"}}' \
+        "${endpoint}";
+done
