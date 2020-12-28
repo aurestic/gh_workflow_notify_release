@@ -1,0 +1,10 @@
+name: 'Notify release'
+description: 'Notify new release to odoo'
+
+runs:
+  using: 'docker'
+  image: 'Dockerfile'
+
+branding:
+  icon: 'tag'
+  color: 'blue'
