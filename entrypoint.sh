@@ -1,7 +1,6 @@
 #!/bin/sh
 set -eu
 
-GITHUB_REPOSITORY=
 echo "GITHUB_REPOSITORY: $GITHUB_REPOSITORY";
 
 ENDPOINTS="https://diagram.aurestic.com/github/release"
