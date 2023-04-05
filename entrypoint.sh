@@ -5,7 +5,7 @@ echo "GITHUB_REPOSITORY: $GITHUB_REPOSITORY";
 
 ENDPOINTS="https://diagram.aurestic.com/github/release"
 ENDPOINTS="${ENDPOINTS} https://aures.aurestic.com/github/release"
-ENDPOINTS="${ENDPOINTS} https://testaures15.aurestic.com/github/release"
+ENDPOINTS="${ENDPOINTS} https://aures15.aurestic.com/github/release"
 
 for endpoint in ${ENDPOINTS};do
     curl --header "Content-Type: application/json" \
